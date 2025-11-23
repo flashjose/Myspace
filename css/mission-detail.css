@@ -1,0 +1,579 @@
+
+/* 任务介绍部分 */
+.mission-intro {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 60px;
+    align-items: center;
+}
+
+.intro-image {
+    flex: 1;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.intro-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.intro-image:hover img {
+    transform: scale(1.03);
+}
+
+.intro-content {
+    flex: 1;
+}
+
+.intro-content h3 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #000;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.intro-content h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: #000;
+}
+
+.intro-content p {
+    margin-bottom: 20px;
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* 时间轴样式 */
+.mission-highlights {
+    margin-bottom: 60px;
+}
+
+.mission-highlights h3 {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+    color: #000;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.mission-highlights h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #000;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background-color: #000;
+}
+
+.timeline-item {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.timeline-date {
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -24px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #000;
+}
+
+.timeline-content h4 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.timeline-content p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* 火星车样式 */
+.mission-rovers {
+    margin-bottom: 60px;
+}
+
+.mission-rovers h3 {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+    color: #000;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.mission-rovers h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #000;
+}
+
+.rover-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+}
+
+.rover-card {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.rover-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.rover-image {
+    height: 250px;
+    overflow: hidden;
+}
+
+.rover-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.rover-card:hover .rover-image img {
+    transform: scale(1.05);
+}
+
+.rover-info {
+    padding: 25px;
+}
+
+.rover-info h4 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.rover-mission {
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.rover-info p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* 未来展望样式 */
+.mission-future {
+    margin-bottom: 60px;
+}
+
+.mission-future h3 {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+    color: #000;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.mission-future h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #000;
+}
+
+.future-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.future-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.future-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.future-card h4 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.future-card p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* 任务阶段样式 */
+.mission-phases {
+    margin-bottom: 60px;
+}
+
+.mission-phases h3 {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+    color: #000;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.mission-phases h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #000;
+}
+
+.phase-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.phase-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.phase-number {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.phase-content {
+    flex: 1;
+}
+
+.phase-content h4 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.phase-content p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* 关键技术样式 */
+.mission-technology {
+    margin-bottom: 60px;
+}
+
+.mission-technology h3 {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+    color: #000;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.mission-technology h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #000;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.tech-card {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.tech-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.tech-image {
+    height: 250px;
+    overflow: hidden;
+}
+
+.tech-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.tech-card:hover .tech-image img {
+    transform: scale(1.05);
+}
+
+.tech-info {
+    padding: 25px;
+}
+
+.tech-info h4 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.tech-info p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* 国际合作样式 */
+.mission-partners {
+    margin-bottom: 60px;
+}
+
+.mission-partners h3 {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+    color: #000;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.mission-partners h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #000;
+}
+
+.partner-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.partner-item {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.partner-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.partner-item h4 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.partner-item p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* 探测器样式 */
+.probe-showcase {
+    margin-bottom: 60px;
+}
+
+.probe-showcase h3 {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+    color: #000;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.probe-showcase h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #000;
+}
+
+.probe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.probe-card {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.probe-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.probe-image {
+    height: 220px;
+    overflow: hidden;
+}
+
+.probe-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.probe-card:hover .probe-image img {
+    transform: scale(1.05);
+}
+
+.probe-info {
+    padding: 25px;
+}
+
+.probe-info h4 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.probe-info p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* 响应式设计 */
+@media (max-width: 992px) {
+    .mission-intro {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .rover-grid, .tech-grid, .probe-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 50px 0;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .intro-content h3, .mission-highlights h3, .mission-rovers h3, 
+    .mission-future h3, .mission-phases h3, .mission-technology h3, 
+    .mission-partners h3, .probe-showcase h3 {
+        font-size: 1.5rem;
+    }
+
+    .phase-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .phase-number {
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .rover-grid, .future-grid, .tech-grid, .partner-list, .probe-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline {
+        padding-left: 20px;
+    }
+
+    .timeline::before {
+        left: 5px;
+    }
+
+    .timeline-item::before {
+        left: -19px;
+    }
+}

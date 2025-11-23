@@ -1,0 +1,940 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', 'Microsoft YaHei', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 导航栏 */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+/* 品牌LOGO样式 */
+.brand-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+.logo h1 a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+}
+
+.nav-left {
+    flex: 1;
+}
+
+.nav-right {
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.nav-left ul, .nav-right ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav-left ul li, .nav-right ul li {
+    margin-left: 30px;
+}
+
+.nav-left ul li:first-child, .nav-right ul li:first-child {
+    margin-left: 0;
+}
+
+.nav-left ul li a, .nav-right ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    position: relative;
+    padding-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-left ul li a::after, .nav-right ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+
+.nav-left ul li a:hover::after, .nav-right ul li a:hover::after {
+    width: 100%;
+}
+
+#login-btn {
+    background-color: rgba(15, 15, 15, 0.1);
+    padding: 8px 3px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+#login-btn:hover {
+    background-color: rgba(1, 2, 24, 0.2);
+}
+
+/* 登录模态框样式 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 30px;
+    border: none;
+    width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    color: #777;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #000;
+}
+
+.modal-content h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #000;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #000;
+    outline: none;
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 0.9rem;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    color: #555;
+}
+
+.remember-me input {
+    margin-right: 8px;
+}
+
+.forgot-password {
+    color: #555;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+    color: #000;
+}
+
+.login-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #333;
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 20px;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.signup-link a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.signup-link a:hover {
+    color: #333;
+}
+
+/* 主视觉区 */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: #000;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    flex: 1;
+    padding: 0 50px;
+    color: #fff;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+    opacity: 0.9;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.hero-image {
+    flex: 2;
+    height: 100%;
+    background-image: url('../images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+}
+
+/* 通用区块样式 */
+.section {
+    padding: 80px 0;
+}
+
+.alt-bg {
+    background-color: #f5f5f5;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+    color: #000;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #000;
+}
+
+/* 探索任务 */
+.mission-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.mission-card {
+    background-color: #fff;
+    padding: 40px 30px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.mission-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.mission-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.mission-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.mission-card p {
+    margin-bottom: 25px;
+    color: #555;
+}
+
+.learn-more {
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 3px;
+    transition: all 0.3s ease;
+}
+
+.learn-more::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #000;
+    transition: width 0.3s ease;
+}
+
+.learn-more:hover::after {
+    width: 100%;
+}
+.mission-icon img {
+    width: 50px;
+    height: 50px;
+    
+}
+/* 前沿科技 */
+.tech-showcase {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.tech-item {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.tech-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.tech-image {
+    flex: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.tech-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.tech-image:hover img {
+    transform: scale(1.03);
+}
+
+.tech-content {
+    flex: 1;
+}
+
+.tech-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.tech-content p {
+    margin-bottom: 25px;
+    color: #555;
+    font-size: 1.1rem;
+}
+
+.tech-content ul {
+    list-style-type: none;
+}
+
+.tech-content ul li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+    color: #555;
+}
+
+.tech-content ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 8px;
+    height: 8px;
+    background-color: #000;
+    border-radius: 50%;
+}
+
+/* 空间站 */
+.station-comparison {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 40px;
+}
+
+.station-card {
+    background-color: #000;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.station-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.station-image {
+    height: 250px;
+    overflow: hidden;
+}
+
+.station-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.station-card:hover .station-image img {
+    transform: scale(1.05);
+}
+
+.station-info {
+    padding: 30px;
+}
+
+.station-info h3 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.station-info p {
+    margin-bottom: 25px;
+    color: #fff;
+}
+
+.station-stats {
+    display: flex;
+    justify-content: space-between;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-value {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+/* 最新资讯 */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.news-item {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.news-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.news-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.news-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.news-item:hover .news-image img {
+    transform: scale(1.05);
+}
+
+.news-content {
+    padding: 25px;
+}
+
+.news-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.news-date {
+    color: #777;
+}
+
+.news-category {
+    color: #000;
+    font-weight: 600;
+}
+
+.news-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.news-content p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.read-more {
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 3px;
+    transition: all 0.3s ease;
+}
+
+.read-more::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #000;
+    transition: width 0.3s ease;
+}
+
+.read-more:hover::after {
+    width: 100%;
+}
+
+/* 图库 */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    height: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    color: #fff;
+    transform: translateY(10px);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover .gallery-caption {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.gallery-caption h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.gallery-caption p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* 页脚 */
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 60px 0 30px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-section h3 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: #fff;
+}
+
+.footer-section p {
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    opacity: 1;
+    padding-left: 5px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    opacity: 0.6;
+    font-size: 0.9rem;
+}
+
+/* 移动端菜单按钮 */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+/* 响应式设计 */
+@media (max-width: 992px) {
+    .hero {
+        flex-direction: column;
+        height: auto;
+        padding: 100px 0 50px;
+    }
+
+    .hero-content {
+        padding: 0 30px 50px;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero-image {
+        height: 400px;
+        width: 100%;
+    }
+
+    .tech-item, .tech-item.reverse {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .station-comparison {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    
+    .nav-container {
+        padding: 15px;
+        position: relative;
+        flex-wrap: nowrap;
+    }
+    
+    .brand-logo {
+        order: 1;
+    }
+    
+    .logo {
+        order: 2;
+        margin-right: auto;
+    }
+    
+    .menu-toggle {
+        order: 3;
+    }
+    
+    .nav-left, .nav-right {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.3s ease;
+        z-index: 1000;
+    }
+    
+    .nav-left.active, .nav-right.active {
+        right: 0;
+    }
+    
+    .nav-left ul, .nav-right ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+        gap: 30px;
+    }
+
+    .nav-left ul li, .nav-right ul li {
+        margin: 0;
+    }
+    
+    .nav-left ul li a, .nav-right ul li a {
+        font-size: 1.2rem;
+    }
+    
+    #login-btn {
+        background-color: rgba(255, 255, 255, 0.2);
+        padding: 10px 20px;
+        border-radius: 4px;
+        font-weight: 600;
+        margin-top: 10px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .mission-grid, .news-grid, .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .station-stats {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .section {
+        padding: 50px 0;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .mission-card {
+        padding: 30px 20px;
+    }
+}
