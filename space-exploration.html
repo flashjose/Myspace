@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>星际探索 - 航天科技前沿</title>
+    <meta name="description" content="探索宇宙奥秘，关注航天科技前沿，分享最新航天资讯与成就">
+    <meta name="Keywords" content="航天,太空探索,火箭,卫星,空间站,宇宙,科技">
+    <link rel="stylesheet" href="css/space-style.css">
+    <script src="js/mobile-menu.js" defer></script>
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <header class="header">
+        <div class="nav-container">
+            <!-- LOGO位置 -->
+            <div class="brand-logo">
+                <a href="https://www.nasa.gov/" target="_blank"><img src="./images/logo.png" class="logo-image"></a>
+
+            </div>
+            
+            <div class="logo">
+                <h1><a href="#">M-Universe</a></h1>
+            </div>
+            
+            <!-- 左导航栏 -->
+            <nav class="nav-left">
+                <ul>
+                    <li><a href="carrier-rocket.html">运载火箭</a></li>
+                    <li><a href="satellite.html">卫星</a></li>
+                    <li><a href="launch-center.html">发射中心</a></li>
+                </ul>
+            </nav>
+            
+            <!-- 右导航栏 -->
+            <nav class="nav-right">
+                <ul>
+                    <li><a href="#missions">探索任务</a></li>
+                    <li><a href="#technology">前沿科技</a></li>
+                    <li><a href="#stations">空间站</a></li>
+                    <li><a href="#news">最新资讯</a></li>
+                    <li><a href="#" id="login-btn">登录</a></li>
+                </ul>
+            </nav>
+            
+            <!-- 移动端菜单按钮 -->
+            <button class="menu-toggle" id="menuToggle">☰</button>
+        </div>
+    </header>
+    
+    <!-- 登录模态框 -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>用户登录</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="username">用户名</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">密码</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-options">
+                    <label class="remember-me">
+                        <input type="checkbox" name="remember"> 记住我
+                    </label>
+                    <a href="#" class="forgot-password">忘记密码?</a>
+                </div>
+                <button type="submit" class="login-button">登录</button>
+                <div class="signup-link">
+                    还没有账号? <a href="#">立即注册</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 主视觉区 -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>探索无垠宇宙</h1>
+            <p>人类对太空的探索永无止境，从地球到月球，从太阳系到银河系，我们不断突破边界，拓展认知</p>
+            <a href="#missions" class="cta-button">开始探索</a>
+        </div>
+        <div class="hero-image"></div>
+    </section>
+
+    <!-- 探索任务 -->
+    <section id="missions" class="section">
+        <div class="container">
+            <h2 class="section-title">探索任务</h2>
+            <div class="mission-grid">
+                <div class="mission-card">
+                    <div class="mission-icon"><img src="./images/rocket.png"></div>
+                    <h3>火星探索</h3>
+                    <p>人类探索红色星球的壮举，从探测车到载人任务，揭开火星的神秘面纱</p>
+                    <a href="space-missions-simple.html#mars" class="learn-more">了解更多 →</a>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-icon"><img src="./images/moon.png"></div>
+                    <h3>重返月球</h3>
+                    <p>阿尔忒弥斯计划将带领人类重返月球，建立永久性月球基地</p>
+                    <a href="space-missions-simple.html#moon" class="learn-more">了解更多 →</a>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-icon"><img src="./images/ship.png"></div>
+                    <h3>深空探测</h3>
+                    <p>旅行者号、新视野号等探测器正飞向太阳系边缘，探索未知领域</p>
+                    <a href="space-missions-simple.html#deepspace" class="learn-more">了解更多 →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 前沿科技 -->
+    <section id="technology" class="section alt-bg">
+        <div class="container">
+            <h2 class="section-title">前沿科技</h2>
+            <div class="tech-showcase">
+                <div class="tech-item">
+                    <div class="tech-image">
+                        <img src="./images/猎鹰九号.jpg" alt="猎鹰九号">
+                    </div>
+                    <div class="tech-content">
+                        <h3>可重复使用火箭</h3>
+                        <p>SpaceX引领的火箭回收技术革命，大幅降低太空探索成本，使大规模太空任务成为可能</p>
+                        <ul>
+                            <li>猎鹰9号火箭成功回收超过100次</li>
+                            <li>星舰开发中，将实现完全可重复使用</li>
+                            <li>大幅降低发射成本，提高发射频率</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tech-item reverse">
+                    <div class="tech-content">
+                        <h3>离子推进技术</h3>
+                        <p>高效能的离子推进系统为深空探索提供持续动力，虽推力小但能长期工作</p>
+                        <ul>
+                            <li>比传统化学推进效率提高10倍</li>
+                            <li>适合长期深空任务</li>
+                            <li>已应用于多个深空探测器</li>
+                        </ul>
+                    </div>
+                    <div class="tech-image">
+                        <img src="./images/离子推进器.jpg" alt="离子推进技术">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 空间站 -->
+    <section id="stations" class="section">
+        <div class="container">
+            <h2 class="section-title">空间站</h2>
+            <div class="station-comparison">
+                <div class="station-card">
+                    <div class="station-image">
+                        <img src="./images/国际空间站.jpg" alt="国际空间站">
+                    </div>
+                    <div class="station-info">
+                        <h3>国际空间站</h3>
+                        <p>人类在太空的永久前哨，多国合作建造和运营的太空实验室</p>
+                        <div class="station-stats">
+                            <div class="stat">
+                                <span class="stat-value">1998</span>
+                                <span class="stat-label">年开始建造</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">420</span>
+                                <span class="stat-label">吨重量</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">15</span>
+                                <span class="stat-label">国家参与</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="station-card">
+                    <div class="station-image">
+                        <img src="./images/天宫空间站.jpg" alt="中国天宫空间站">
+                    </div>
+                    <div class="station-info">
+                        <h3>中国天宫空间站</h3>
+                        <p>中国自主建造和运营的太空实验室，标志着中国航天事业的新高度</p>
+                        <div class="station-stats">
+                            <div class="stat">
+                                <span class="stat-value">2021</span>
+                                <span class="stat-label">年开始建造</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">100</span>
+                                <span class="stat-label">吨重量</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">3</span>
+                                <span class="stat-label">舱段组成</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 最新资讯 -->
+    <section id="news" class="section alt-bg">
+        <div class="container">
+            <h2 class="section-title">最新资讯</h2>
+            <div class="news-grid">
+                <article class="news-item">
+                    <div class="news-image">
+                        <img src="./images/星际彗星 .jpg" alt="星际彗星 3I/ATLAS">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-date">2025 年 11 月</span>
+                            <span class="news-category">天文观测</span>
+                        </div>
+                        <h3>星际彗星 3I/ATLAS 观测新突破</h3>
+                        <p>NASA 发布了星际彗星 3I/ATLAS 的高清影像和数据。这是人类发现的第三个来自太阳系外的天体，其在 10 月底通过近日点时，火星轨道器从独特视角捕捉到了它的活跃状态。12 月 19 日，它将抵达与地球的最近距离（约 2.69 亿公里），
+                            为天文学家研究星际天体的物质组成与演化规律提供了宝贵线索。</p>
+                        <a href="https://app.myzaker.com/news/article.php?pk=69158bcf8e9f095cbf01aa89" class="read-more" target="_blank">阅读全文 →</a>
+                    </div>
+                </article>
+                <article class="news-item">
+                    <div class="news-image">
+                        <img src="./images/94.jpg" alt="94号发射台">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-date">2025 年 11 月</span>
+                            <span class="news-category">火箭技术</span>
+                        </div>
+                        <h3>蓝色起源新格伦火箭 “9×4” 方案发布</h3>
+                        <p>蓝色起源公司公布 “新格伦 9×4” 超重型火箭设计方案。该火箭高度超越土星五号，配备 9 台助推级 BE-4 发动机和 4 台上面级 BE-3U 发动机，低地球轨道运力突破 70 吨，月球转移轨道运力达 20 吨，
+                            可重复使用设计进一步降低发射成本，标志着其在重型运载火箭领域向 SpaceX 星舰发起强力挑战。</p>
+                        <a href="https://www.toutiao.com/article/7575058006484763163/?upstream_biz=doubao&source=m_redirect&wid=1704386406607" class="read-more" target="_blank">阅读全文 →</a>
+                    </div>
+                </article>
+                <article class="news-item">
+                    <div class="news-image">
+                        <img src="./images/NASA.webp" alt="NASA EscaPADE 火星探测任务">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-date">2025 年 11 月 13 日</span>
+                            <span class="news-category">火星探索</span>
+                        </div>
+                        <h3>NASA EscaPADE 火星探测任务发射</h3>
+                        <p>NASA 的 EscaPADE 双星任务搭乘蓝色起源新格伦火箭成功发射。这对双胞胎轨道器将先前往拉格朗日 L2 点待命，于 2026 年 11 月借力地球引力转向火星，预计 2027 年抵达。任务成本不足 1 亿美元，
+                            通过创新轨道设计和低成本模式，旨在揭开火星大气逃逸的奥秘，为未来火星样本返回任务提供关键数据。</p>
+                        <a href="https://science.nasa.gov/blogs/escapade/" class="read-more" target="_blank">阅读全文 →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 图库 -->
+    <section id="gallery" class="section">
+        <div class="container">
+            <h2 class="section-title">瞰--宇宙</h2>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="./images/从太空看地球.png" alt="从太空看地球">
+                    <div class="gallery-caption">
+                        <h3>从太空看地球</h3>
+                        <p>国际空间站拍摄的地球壮丽景象</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/星云.png" alt="星云">
+                    <div class="gallery-caption">
+                        <h3>猎户座星云</h3>
+                        <p>哈勃望远镜拍摄的恒星诞生地</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/火星表面.png" alt="火星表面">
+                    <div class="gallery-caption">
+                        <h3>火星表面</h3>
+                        <p>好奇号火星车拍摄的地貌</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/土星环.png" alt="土星环">
+                    <div class="gallery-caption">
+                        <h3>土星环</h3>
+                        <p>卡西尼号拍摄的壮观土星环</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/太空行走.png" alt="太空行走">
+                    <div class="gallery-caption">
+                        <h3>太空行走</h3>
+                        <p>宇航员在国际空间站外工作</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/火箭发射.png" alt="火箭发射">
+                    <div class="gallery-caption">
+                        <h3>火箭发射</h3>
+                        <p>猎鹰重型火箭升空瞬间</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>星际探索</h3>
+                    <p>探索宇宙奥秘，关注航天科技前沿，分享最新航天资讯与成就</p>
+                </div>
+                <div class="footer-section">
+                    <h3>快速链接</h3>
+                    <ul>
+                        <li><a href="#missions">探索任务</a></li>
+                        <li><a href="#technology">前沿科技</a></li>
+                        <li><a href="#stations">空间站</a></li>
+                        <li><a href="#news">最新资讯</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>联系我们</h3>
+                    <ul>
+                        <li>邮箱：abcmengxiangle@163.com</li>
+                        <li>电话：+86 15269288629</li>
+                        <li>地址：济南大学南苑学23楼527宿舍</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2029 星际探索. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的平滑滚动效果
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    <script src="js/login-modal.js"></script>
+</body>
+</html>
