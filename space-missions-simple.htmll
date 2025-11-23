@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>探索任务详情 - 星际探索</title>
+    <meta name="description" content="深入了解火星探索、重返月球和深空探测任务的详细信息">
+    <meta name="Keywords" content="航天,太空探索,火星,月球,深空探测,任务详情">
+    <link rel="stylesheet" href="css/simple.css"></link>
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">
+                <h1><a href="space-exploration.html">星际探索</a></h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#mars">火星探索</a></li>
+                    <li><a href="#moon">重返月球</a></li>
+                    <li><a href="#deepspace">深空探测</a></li>
+                    <li><a href="space-exploration.html">返回主页</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 火星探索 -->
+    <section id="mars" class="section">
+        <div class="container">
+            <h2 class="section-title">火星探索</h2>
+
+            <div class="mission-card">
+                <div class="mission-header">
+                    <h3 class="mission-title">红色星球的奥秘</h3>
+                </div>
+                <div class="mission-content">
+                    <div class="mission-image">
+                        <img src="./images/火星.webp" alt="火星探索">
+                    </div>
+                    <div class="mission-text">
+                        <p>火星是人类太空探索的重要目标，这颗红色星球与地球有着诸多相似之处，是太阳系中最有可能存在过生命的地方。</p>
+                        <div class="mission-highlights">
+                            <h4>关键任务</h4>
+                            <ul class="highlight-list">
+                                <li>好奇号火星车：分析火星地质，寻找生命迹象</li>
+                                <li>毅力号火星车：采集岩石样本，为未来返回地球做准备</li>
+                                <li>祝融号火星车：中国首个火星探测器，探索火星表面</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 重返月球 -->
+    <section id="moon" class="section">
+        <div class="container">
+            <h2 class="section-title">重返月球</h2>
+
+            <div class="mission-card">
+                <div class="mission-header">
+                    <h3 class="mission-title">阿尔忒弥斯计划</h3>
+                </div>
+                <div class="mission-content">
+                    <div class="mission-image">
+                        <img src="./images/阿尔忒修斯.webp" alt="重返月球">
+                    </div>
+                    <div class="mission-text">
+                        <p>阿尔忒弥斯计划将带领人类重返月球，建立永久性月球基地，为未来火星任务做准备。</p>
+                        <div class="mission-highlights">
+                            <h4>任务阶段</h4>
+                            <ul class="highlight-list">
+                                <li>阿尔忒弥斯I：无人绕月飞行测试</li>
+                                <li>阿尔忒弥斯II：载人绕月飞行任务</li>
+                                <li>阿尔忒弥斯III：载人登月，目标月球南极</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 深空探测 -->
+    <section id="deepspace" class="section">
+        <div class="container">
+            <h2 class="section-title">深空探测</h2>
+
+            <div class="mission-card">
+                <div class="mission-header">
+                    <h3 class="mission-title">探索未知领域</h3>
+                </div>
+                <div class="mission-content">
+                    <div class="mission-image">
+                        <img src="./images/星空探测.jpg" alt="深空探测">
+                    </div>
+                    <div class="mission-text">
+                        <p>旅行者号、新视野号等探测器正飞向太阳系边缘，探索未知领域，拓展人类认知边界。</p>
+                        <div class="mission-highlights">
+                            <h4>重要探测器</h4>
+                            <ul class="highlight-list">
+                                <li>旅行者1号和2号：已飞出太阳系，进入星际空间</li>
+                                <li>新视野号：成功飞掠冥王星，探索柯伊伯带</li>
+                                <li>朱诺号：研究木星大气层和磁场结构</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 星际探索. 探索宇宙，永无止境</p>
+        </div>
+    </footer>
+</body>
+</html>
